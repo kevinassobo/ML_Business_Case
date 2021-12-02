@@ -1,0 +1,19 @@
+1. Statiscal Analysis
+----------------------
+
+- Percentage of each type of Store in the database
+- Pie charts
+- Check the distribution of the Sales 
+
+Add more graphs and start a report
+
+2. Feature Engineering
+-----------------------
+
+- Create a variable "CompetitionAge" : number of months since the competition opened 
+- Create a variable "Promo2Age" : number of months since th store is participating in Promo2 
+- Create a variable "IsPromo2Applied" : whether or not Promo2 is applied to the store on the Date
+    based on PromoInterval (months when Promo2 is applied)
+
+
+- Manage missing values 
