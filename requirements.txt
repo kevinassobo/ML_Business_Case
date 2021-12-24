@@ -1,0 +1,7 @@
+joblib>=1.0.0
+streamlit>=1.2.0
+numpy
+pandas
+plotly
+sklearn
+xgboost
