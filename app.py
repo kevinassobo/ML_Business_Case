@@ -53,9 +53,14 @@ def predicted_sales(store_id, min_date, max_date):
 
     df1 = df[(df['Store'] == store_id) & (df['Date'] >= min_date) & (df['Date'] <= max_date)]
 
-    df1.loc[df1["Open"] == 1, "Predicted Sales"] = pipeline.predict(df1.loc[df1["Open"] == 1, features])
-    df1.loc[df1["Open"] == 0, "Predicted Sales"] = 0
-
+    try : 
+        df1.loc[df1["Open"] == 1, "Predicted Sales"] = pipeline.predict(df1.loc[df1["Open"] == 1, features])
+    except:
+        pass
+    try :
+        df1.loc[df1["Open"] == 0, "Predicted Sales"] = 0
+    except :
+        pass
 
     fig = px.line(
             df1, x='Date', y='Predicted Sales', markers=True,
