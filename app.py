@@ -8,7 +8,7 @@ import plotly.express as px
 import streamlit as st
 
 # Explain the app to the user
-st.title("Prediction of Sales 📈")
+st.title("Store Sales Forecasting 📈")
 st.write("")
 st.write("This app allows you to visualize the predicted sales for a store.") 
 st.write("Since the available database only goes from 2015/01/01 to 2015/07/31 yet, \
@@ -74,7 +74,7 @@ def predicted_sales(store_id, min_date, max_date):
     # Use plotly to plot the Sales
     fig = px.line(
             df1, x='Date', y='Predicted Sales', markers=True,
-            title=f"Sales for store {store_id} from {min_date.date()} to {max_date.date()}"
+            title=f"Predicted Sales for store n°{store_id} from {min_date.date()} to {max_date.date()}"
     )
 
     fig.update_layout(
